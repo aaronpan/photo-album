@@ -1,0 +1,44 @@
+<!-- @ 这个符号提示 XML 文件的解析器应当对 @ 后的名字进行解析，
+     如下“@dimen/activity_vertical_margin”，
+     解析器会从 values/dimens.xml 里面读取 activity_vertical_margin 这个变量的值。 -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.android.photolist.activity.MainActivity" >
+
+    <Button
+        android:id="@+id/take_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/camera"  
+        android:layout_marginTop="31dp"
+        android:onClick="takepicture"
+        android:text="" />
+
+    <Button
+        android:id="@+id/show_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBaseline="@+id/take_photo"
+        android:layout_alignBottom="@+id/take_photo"
+        android:background="@drawable/photo_list"  
+        android:layout_centerHorizontal="true"
+        android:text="" />
+
+    <Button
+        android:id="@+id/delete_photos"
+        android:layout_width="100dp"
+        android:layout_height="100dp  "
+        android:layout_alignLeft="@+id/show_photo"
+        android:background="@drawable/trash" 
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="146dp"
+        android:onClick="delete_photos"
+        android:text="" />
+
+</RelativeLayout>
